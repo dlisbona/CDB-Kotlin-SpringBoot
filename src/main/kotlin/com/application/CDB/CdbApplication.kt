@@ -8,4 +8,5 @@ class CdbApplication
 
 fun main(args: Array<String>) {
 	runApplication<CdbApplication>(*args)
+	//test de mon ssh
 }

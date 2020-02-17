@@ -1,4 +1,4 @@
-package com.application.CDB
+package com.application.CDB.controllers
 
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model

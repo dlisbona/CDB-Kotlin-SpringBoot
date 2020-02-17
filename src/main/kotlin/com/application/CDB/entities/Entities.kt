@@ -1,4 +1,4 @@
-package com.application.CDB
+package com.application.CDB.entities
 
 import java.time.LocalDateTime
 import javax.persistence.*

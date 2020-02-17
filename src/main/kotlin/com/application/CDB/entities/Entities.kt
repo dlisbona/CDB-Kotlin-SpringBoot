@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-data class Article(
+class Article(
         val name: String,
         @ManyToOne val company: Company?,
         val discontinued: LocalDateTime?,
@@ -12,6 +12,6 @@ data class Article(
         @Id @GeneratedValue val id: Long) // pas d'id nullable
 
 @Entity
-data class Company(
+class Company(
         val name: String, // shift+F6 pour changer nom dans toutes les classes
         @Id @GeneratedValue val id: Long)

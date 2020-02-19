@@ -1,4 +1,4 @@
-package com.application.CDB.services.utils
+package com.application.CDB.utils
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatterBuilder

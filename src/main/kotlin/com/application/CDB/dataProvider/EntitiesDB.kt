@@ -1,17 +1,17 @@
-package com.application.CDB.entities
+package com.application.CDB.dataProvider
 
 import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-class Article(
+class ComputerDB(
         val name: String,
-        @ManyToOne val company: Company?,
+        @ManyToOne val companyId: CompanyDB?,
         val discontinued: LocalDateTime?,
         val introduced: LocalDateTime,
-        @Id @GeneratedValue val id: Long) // pas d'id nullable
+        @Id @GeneratedValue val computerId: Long) // pas d'id nullable
 
 @Entity
-class Company(
+class CompanyDB(
         val name: String, // shift+F6 pour changer nom dans toutes les classes
         @Id @GeneratedValue val id: Long)

@@ -1,10 +1,10 @@
 package com.application.CDB.interfacesAdaptaters
 
-import com.application.CDB.dataProvider.RepositoryComputer
-import com.application.CDB.useCases.EditComputerGateway
+import com.application.CDB.frameworks.dataProvider.RepositoryComputer
+import com.application.CDB.useCases.EditComputerInterface
 import java.time.LocalDateTime
 
-class LocalEditComputer (private val repositoryComputer: RepositoryComputer): EditComputerGateway {
+class LocalEditComputer (private val repositoryComputer: RepositoryComputer): EditComputerInterface {
 
     override fun updateComputerName(idSelected: Long, computerName: String) {
     }

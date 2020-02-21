@@ -2,7 +2,7 @@ package com.application.CDB.useCases
 
 import java.time.LocalDateTime
 
-interface EditComputerGateway {
+interface EditComputerInterface {
     fun updateComputerName (idSelected: Long, computerName: String)
     fun updateComputerIntroduced(idSelected: Long, computerIntroduced: LocalDateTime)
     fun updateComputerDiscontinued (idSelected: Long, computerDiscontinued: LocalDateTime)

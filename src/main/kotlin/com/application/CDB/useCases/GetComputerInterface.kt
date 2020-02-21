@@ -4,6 +4,6 @@ import com.application.CDB.domain.Computer
 import rx.Observable
 import rx.Single
 
-interface GetComputerGateway {
+interface GetComputerInterface {
     fun getComputerById(id: Long): Observable<Computer>
 }

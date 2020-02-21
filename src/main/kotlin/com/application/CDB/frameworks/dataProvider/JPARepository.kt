@@ -1,12 +1,13 @@
-package com.application.CDB.dataProvider
+package com.application.CDB.frameworks.dataProvider
 
 import com.application.CDB.domain.Computer
-import com.application.CDB.useCases.EditComputerGateway
-import com.application.CDB.useCases.GetComputerGateway
+import com.application.CDB.useCases.EditComputerInterface
+import com.application.CDB.useCases.GetComputerInterface
 import rx.Observable
 import java.time.LocalDateTime
 
-open class RepositoryComputer () : GetComputerGateway, EditComputerGateway {
+open class RepositoryComputer () : GetComputerInterface, EditComputerInterface {
+
     override fun updateComputerName(idSelected: Long, computerName: String) {
     }
 

@@ -1,9 +1,10 @@
 package com.application.CDB.useCases
 
 import com.application.CDB.domain.Computer
+import com.application.CDB.domain.ComputerInterface
 import java.time.LocalDateTime
 
-class EditComputer (private val editComputerGateway: EditComputerGateway){
+class EditComputer (private val editComputerInterface: EditComputerInterface): ComputerInterface {
     fun editComputer (
                       idComputer: Long,
                       computerName: String ,
@@ -11,13 +12,13 @@ class EditComputer (private val editComputerGateway: EditComputerGateway){
                       computerDiscontinued: LocalDateTime,
                       computerCompanyId: Long
     ) {
-        editComputerGateway.updateComputerName(idComputer, computerName)
-        editComputerGateway.updateComputerIntroduced(idComputer, computerIntroduced)
-        editComputerGateway.updateComputerDiscontinued(idComputer, computerDiscontinued)
-        editComputerGateway.updateComputerCompanyId(idComputer, computerCompanyId)
+        editComputerInterface.updateComputerName(idComputer, computerName)
+        editComputerInterface.updateComputerIntroduced(idComputer, computerIntroduced)
+        editComputerInterface.updateComputerDiscontinued(idComputer, computerDiscontinued)
+        editComputerInterface.updateComputerCompanyId(idComputer, computerCompanyId)
     }
 
-    interface ProductRepository {
+    interface ComputerRepository {
         fun computerIdExist(id: Long): Boolean?
         fun editComputer(computer: Computer)
     }
